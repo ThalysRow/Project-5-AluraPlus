@@ -1,0 +1,218 @@
+/* Aqui eu resetei a margem e o espaçamento interno que já vem pré-definido
+nos navegadores! */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo abaixo importei duas fontes de texto do Google! */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+/* Aqui eu criei variáveis atribuindo cores e fontes à elas, para assim,
+sempre que precisar, chamarei apenas com a Var. */
+
+:root {
+    --primeira-cor: #FFFFFF; 
+    --segunda-cor: #C0C0C0;
+    --terceira-cor: #167BF7;
+    --quarta-cor: #00030C;
+
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+/* Aqui eu coloquei a cor de fundo de todo o corpo da página de preto, como também a cor de todos os 
+textos de branco, além de incluir a fonte geral e o seu tamanho de 1rem(16px) */
+
+body {
+    background-color: var(--quarta-cor);
+    color: var(--primeira-cor);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* Já aqui eu coloquei a altura dela para 100% da tela, ativei o display grid, dividindo a tela em duas colunas de 50% */
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* Aqui eu coloquei uma imagem na tela de fundo da página. Como também, coloquei para ela não espelhar abaixo, ocupar 
+todo o espaço, sem ficar com espaçamento nas bordas. Por fim, alinhei todos os itens no centro, lembrando que a tela foi
+dividida em duas colunar de 50% e os itens ficaram alinhados nesta primeira coluna de 50%!  */
+
+.principal {
+    background-image: url(./assets/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+/* Aqui eu coloquei uma margem de 0 tanto pra cima quanto pra baixo e, 6em para a direita e esquerda.
+Ps: Essa classe é de todo o informativo da página inicial! */
+.container__caixa {
+    margin: 0% 6em;
+}
+
+/* Aqui eu criei uma classe para o título, coloquei a fonte, apliquei o tamanho dela, além do peso! */
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+/* Aqui eu estilizei o botão inicial da página, tirando o sublinhado dele, colocando uma cor de fundo de azul,
+como também coloquei a cor da fonte de branco! Coloquei um espaçamento interno de 1x o tamanho da fonte do 
+texto (1em), adicionei uma borda de 5px, coloquei como display block e por fim, coloquei uma margem de 
+1em(x1 tamanho da fonte) de espaço entre os botões! */
+
+.container__botao {
+    text-decoration: none;
+    background-color: var(--terceira-cor);
+    color: var(--primeira-cor);
+    padding: 1em;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 1em;
+}
+
+/* Aqui eu fiz a estilização do segundo botão, deixando a cor de fundo transparente, como também a cor do texto em branco!
+Adicionei também uma borda de 2px, sólida com a cor branca! */
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--primeira-cor);
+}
+
+/* Aqui eu apliquei a estilização do aviso que fica logo abaixo do último botão, colocando a fonte dele,
+cor do texto e tirei o sublinhado que ficava logo abaixo dele! */
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--segunda-cor);
+    text-decoration: none;
+}
+
+/* Aqui eu centralizei os itens do segundo container no centro, colocando um espaçamento entre a imagem e o texto. */
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+/* Aqui eu coloquei a largura da imagem de 80% - Lembrando que a tela está dividida em duas colunas, ou seja,
+ela está ocupando 80% de largura da primeira coluna -. */
+
+.secundario__imagem {
+    width: 80%;
+}
+
+/* Aqui eu coloquei o peso da fonte do título de 700, o tamanho da fonte de 48px, a cor de branco e também um
+espaçamento em baixo. */
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--primeira-cor);
+    margin-bottom: 0.1em;
+}
+
+/* Aqui apenas coloquei a cor do texto de cinza! */
+
+.descricao__texto {
+color: var(--segunda-cor);
+}
+
+/* Aqui no segundo botão, eu diminui a largura dele, centraliando a sua borda apenas no texo, com o 
+inline block, em seguida, coloquei uma margem em cima de 1x o tamanho da fonte! */
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/* Aqui eu coloquei um espaçamento interno em todas as descrições da página em 2x o tamanho da fonte! */
+
+.container__descricao {
+    padding: 2em;
+}
+
+
+/* Aqui eu alinhei todos os textos do "dispositivos" para o centro! */
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--primeira-cor);
+}
+
+
+/* Aqui eu ativei o display box para flex, alinhando todos os itens de coluna para linha! Em seguida, tirei a decoração
+da lista (o ponto na frente) e alinhei toda a lista para o centro!  */
+
+.dispositivos__lista {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 5em;
+    
+}
+
+/* Aqui eu coloquei o tamanho da fonte dos itens da lista (Tv, Computador e Celular)<
+como também, troquei a cor da fonte! */
+
+.lista__item {
+    font-size: 38px;
+    color: var(--primeira-cor);
+}
+
+/* Aqui eu centralizei todos os itens que estão dentro do rodapé, como também, coloquei
+uma margem de 5em para cima e para baixo e, 3em para a esquerda e direita! */
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+    
+   
+    
+}
+
+/* Aqui eu transformei a lista do rodapé em um container, tirei o estilo que vem por padrão de uma lista 
+alinhei para o centro e coloquei uma margem em cima de 1em */
+
+.rodape__lista {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 1em;
+   
+}
+
+/* Aqui eu tirei o sublinhado das ancoras (a), coloquei uma margem de 1em na esquerda de todos,
+troquei a cor da fonte e alterei o tamanho da fonte! */
+
+.lista__link a {
+    text-decoration: none;
+    margin-left: 1em;
+    color: var(--primeira-cor);
+    font-size: 16px;
+}
+
+/* Por fim, alterei a fonte do texto do rodapé, coloquei uma margem de 1em para cima e baixo e troquei a cor. */
+.rodape__texto {
+    font-size: 14px;
+    margin: 1em 0;
+    color: var(--segunda-cor);
+    
+}
